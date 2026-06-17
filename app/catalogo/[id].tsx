@@ -149,6 +149,9 @@ export default function ProductoDetallePage() {
                   <span className="text-xs px-2 py-1 rounded-full bg-background border border-border text-muted-foreground">
                     {product.param2}
                   </span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-background border border-border text-muted-foreground">
+                    {product.param3}
+                  </span>
                 </div>
                 <p className="text-2xl font-semibold text-foreground">
                   ${product.price.toFixed(2)}
@@ -157,41 +160,51 @@ export default function ProductoDetallePage() {
                   {description}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    className="w-full sm:flex-1 justify-center gap-2"
-                    onClick={() => onConsultInstagram(product)}
-                  >
-                    <Instagram className="w-4 h-4" />
-                    {c.consultButtonLabel}
-                  </Button>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    className="w-full sm:flex-1 justify-center gap-2"
-                    onClick={() => onConsultWhatsApp(product)}
-                  >
-                    <Phone className="w-4 h-4" />
-                    {c.producto.consultWhatsApp}
-                  </Button>
-                </div>
+                {product.soldOut ? (
+                  <div className="w-full flex flex-col items-center gap-3 mt-2">
+                    <Button type="button" variant="outline" className="w-full justify-center" disabled>
+                      {c.producto.soldOutLabel}
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <div className="flex flex-col sm:flex-row gap-3 mt-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="w-full sm:flex-1 justify-center gap-2"
+                        onClick={() => onConsultInstagram(product)}
+                      >
+                        <Instagram className="w-4 h-4" />
+                        {c.consultButtonLabel}
+                      </Button>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="w-full sm:flex-1 justify-center gap-2"
+                        onClick={() => onConsultWhatsApp(product)}
+                      >
+                        <Phone className="w-4 h-4" />
+                        {c.producto.consultWhatsApp}
+                      </Button>
+                    </div>
 
-                <div className="pt-2 border-t border-border/60">
-                  <Button
-                    type="button"
-                    className="w-full justify-center"
-                    onClick={() => onAddToCart(product)}
-                  >
-                    {c.producto.addToCart}
-                  </Button>
-                  {justAdded ? (
-                    <p className="text-xs text-accent text-center mt-2" aria-live="polite">
-                      {c.producto.addedFeedback}
-                    </p>
-                  ) : null}
-                </div>
+                    <div className="pt-2 border-t border-border/60">
+                      <Button
+                        type="button"
+                        className="w-full justify-center"
+                        onClick={() => onAddToCart(product)}
+                      >
+                        {c.producto.addToCart}
+                      </Button>
+                      {justAdded ? (
+                        <p className="text-xs text-accent text-center mt-2" aria-live="polite">
+                          {c.producto.addedFeedback}
+                        </p>
+                      ) : null}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

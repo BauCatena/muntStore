@@ -38,9 +38,11 @@ export type CardProps = {
   imagen?: string
   /** Texto de precio u otra cifra, opcional. */
   precio?: string
+  /** Producto agotado, muestra estado en lugar de botones de consulta. */
+  soldOut?: boolean
 }
 
-export function Card({id, titulo, descripcion, icon, imagen, precio }: CardProps) {
+export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut }: CardProps) {
   const [justAdded, setJustAdded] = useState(false)
   const onAddToCart = (p: Product) => {
     addToCart(p.id, 1)
@@ -51,7 +53,7 @@ export function Card({id, titulo, descripcion, icon, imagen, precio }: CardProps
     return (
       <div className="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
         <Link href={`/catalogo/${id}`} className="block">
-          <div className="relative aspect-[4/3] w-full bg-muted">
+          <div className="relative aspect-[4/5] w-full bg-muted">
             <Image
               src={imagen}
               alt={titulo}
@@ -69,54 +71,65 @@ export function Card({id, titulo, descripcion, icon, imagen, precio }: CardProps
           ) : null}
         </div>
         <div className="w-full flex flex-col items-center justify-center gap-3 pb-2">
-  
-          {/* BOTÓN WHATSAPP */}
-          <div className="w-full flex items-center justify-center">
-            <Button
-              type="button"
-              variant="outline"
-              className="w-85 justify-center gap-2"
-              onClick={() =>
-                onConsultWhatsApp({
-                  id,
-                  name: titulo,
-                  description: descripcion,
-                } as Product)
-              }
-            >
-              <Phone className="w-4 h-4" />
-              {c.producto.consultWhatsApp}
-            </Button>
-          </div>
-
-          {/* BOTÓN CARRITO */}
-          <div className="w-full flex justify-center">
-            <div className="w-full items-center max-w-xs p-2 pt-3 border-t border-border/60 flex flex-col items-center gap-2">
-              
+          {soldOut ? (
+            <div className="w-full flex items-center justify-center">
               <Button
                 type="button"
+                variant="outline"
                 className="w-85 justify-center"
-                onClick={() =>
-                  onAddToCart({
-                    id,
-                    name: titulo,
-                    description: descripcion,
-                  } as Product)
-                }
+                disabled
               >
-                {c.producto.addToCart}
+                Agotado
               </Button>
-
-              {justAdded ? (
-                <p className="text-xs text-accent text-center" aria-live="polite">
-                  {c.producto.addedFeedback}
-                </p>
-              ) : null}
-
             </div>
-          </div>
+          ) : (
+            <>
+              {/* BOTÓN WHATSAPP */}
+              <div className="w-full flex items-center justify-center">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-85 justify-center gap-2"
+                  onClick={() =>
+                    onConsultWhatsApp({
+                      id,
+                      name: titulo,
+                      description: descripcion,
+                    } as Product)
+                  }
+                >
+                  <Phone className="w-4 h-4" />
+                  {c.producto.consultWhatsApp}
+                </Button>
+              </div>
 
-</div>
+              {/* BOTÓN CARRITO */}
+              <div className="w-full flex justify-center">
+                <div className="w-full items-center max-w-xs p-2 pt-3 border-t border-border/60 flex flex-col items-center gap-2">
+                  <Button
+                    type="button"
+                    className="w-85 justify-center"
+                    onClick={() =>
+                      onAddToCart({
+                        id,
+                        name: titulo,
+                        description: descripcion,
+                      } as Product)
+                    }
+                  >
+                    {c.producto.addToCart}
+                  </Button>
+
+                  {justAdded ? (
+                    <p className="text-xs text-accent text-center" aria-live="polite">
+                      {c.producto.addedFeedback}
+                    </p>
+                  ) : null}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     )
   }

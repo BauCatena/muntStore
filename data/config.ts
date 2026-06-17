@@ -216,9 +216,9 @@ export type SiteConfig = {
 
 export const config: SiteConfig = {
   meta: {
-    title: "Nani Patisserie",
+    title: "Münt Store",
     description:
-      "Productos 100% artesanales",
+      "Pensamos en el deporte",
   },
   theme: {
     typography: {
@@ -301,7 +301,7 @@ export const config: SiteConfig = {
   header: {
     logo: {
       src: "/logo1.svg",
-      alt: "Nani Patisserie",
+      alt: "Münt Store",
       widthDesktop: 500,
       heightDesktop: 186,
       widthMobile: 300,
@@ -348,7 +348,7 @@ export const config: SiteConfig = {
   },
   productList: {
     sectionId: "Título productos",
-    eyebrow: "Productos 100% artesanales",
+    eyebrow: "Ofrecemos variedad de productos",
     title: "Nuestros productos",
     productsJsonUrl: "/products.json",
     categorySubtitleSingular: "{count} producto disponible",
@@ -416,7 +416,7 @@ export const config: SiteConfig = {
     social: [
       {
         name: "Instagram",
-        href: "https://instagram.com/nanipatisserie",
+        href: "https://instagram.com/",
         platform: "instagram",
       },
       {
@@ -430,13 +430,13 @@ export const config: SiteConfig = {
     allFilterLabel: "Todos",
     backToHome: "Volver al inicio",
     verCarrito: "Ver carrito",
-    heroEyebrow: "Productos completamente artesanales",
+    heroEyebrow: "",
     pageTitle: "Catálogo de productos",
     emptyMessage: "No se encontraron productos con los filtros seleccionados.",
     favoriteAddAria: "Agregar a favoritos",
     favoriteRemoveAria: "Quitar de favoritos",
     consultButtonLabel: "Consultar por Instagram",
-    instagramUser: "nanipatisserie",
+    instagramUser: "",
     consult: {
       default: "Hola como estás? Te escribo por",
       byCategory: {
@@ -450,7 +450,7 @@ export const config: SiteConfig = {
           "Texto de la consulta por categoria 5",
       },
     },
-    whatsappPhoneE164: "5492634256353",
+    whatsappPhoneE164: "5492634783984",
     producto: {
       backToCatalog: "Volver al catálogo",
       detalleEyebrow: "Hechos con dedicación",
@@ -461,6 +461,7 @@ export const config: SiteConfig = {
       addToCart: "Agregar al carrito",
       addedFeedback: "Producto agregado al carrito",
       consultWhatsApp: "Consultar por WhatsApp",
+      soldOutLabel: "Agotado",
     },
   },
   carrito: {

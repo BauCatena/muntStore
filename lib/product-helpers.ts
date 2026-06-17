@@ -9,10 +9,12 @@ export function normalizeProduct(input: ProductInput): Product {
     // Prioriza modelo nuevo, luego compatibilidad legacy.
     param1: input.param1 ?? input.category ?? DEFAULT_PARAM_VALUE,
     param2: input.param2 ?? input.subCategory ?? DEFAULT_PARAM_VALUE,
+    param3: input.param3 ?? DEFAULT_PARAM_VALUE,
     price: input.price,
     image: input.image,
     images: input.images,
     description: input.description,
+    soldOut: input.soldOut ?? false,
   }
 }
 

@@ -25,10 +25,16 @@ export default function CatalogoPage() {
   // Leemos los parámetros iniciales de la URL
   const initialCategory = searchParams.get("categoria") || searchParams.get("param1")
   const initialGender = searchParams.get("genero") || searchParams.get("param2")
+  const initialParam3 = searchParams.get("param3")
+  const initialSoldOut = searchParams.get("soldOut")
 
   // Estados para los botones dinámicos
   const [activeCategory, setActiveCategory] = useState(initialCategory || ALL_FILTER)
   const [activeGender, setActiveGender] = useState(initialGender || ALL_FILTER)
+  const [activeParam3, setActiveParam3] = useState(initialParam3 || ALL_FILTER)
+  const [activeSoldOut, setActiveSoldOut] = useState(
+    initialSoldOut === "true" ? "soldOut" : initialSoldOut === "false" ? "available" : ALL_FILTER
+  )
 
   useEffect(() => {
     let cancelled = false
@@ -61,34 +67,46 @@ export default function CatalogoPage() {
     }
     const uniqueGenders = [...new Set(productsForLevel2.map((p) => p.param2))].filter(Boolean)
 
+    const uniqueParam3Values = [...new Set(productsForLevel2.map((p) => p.param3))].filter(Boolean)
+
     return {
       categoria: uniqueCategories.map((cat) => ({ value: cat })),
       genero: uniqueGenders.map((gen) => ({ value: gen })),
+      param3: uniqueParam3Values.map((value) => ({ value })),
     }
   }, [products, activeCategory])
 
   // Manejador para el Nivel 1 (Categorías Padre)
   const handlePrimaryFilterClick = (cat: string) => {
     setActiveCategory(cat)
-    // Al cambiar la categoría principal, reseteamos el filtro hijo para evitar combinaciones inválidas
+    // Al cambiar la categoría principal, reseteamos los filtros hijos para evitar combinaciones inválidas
     setActiveGender(ALL_FILTER)
+    setActiveParam3(ALL_FILTER)
   }
 
   // Filtrado final de los productos
   const filteredProducts = useMemo(() => {
     const normalizedCat = normalizeFilter(activeCategory === ALL_FILTER ? "" : activeCategory)
     const normalizedGen = normalizeFilter(activeGender === ALL_FILTER ? "" : activeGender)
+    const normalizedParam3 = normalizeFilter(activeParam3 === ALL_FILTER ? "" : activeParam3)
 
     return products.filter((product) => {
       const productCat = normalizeFilter(product.param1)
       const productGen = normalizeFilter(product.param2)
+      const productParam3 = normalizeFilter(product.param3)
 
       const matchesCategory = normalizedCat === "" || productCat === normalizedCat
       const matchesGender = normalizedGen === "" || productGen === normalizedGen
+      const matchesParam3 = normalizedParam3 === "" || productParam3 === normalizedParam3
 
-      return matchesCategory && matchesGender
+      const matchesSoldOut =
+        activeSoldOut === ALL_FILTER ||
+        (activeSoldOut === "soldOut" && product.soldOut) ||
+        (activeSoldOut === "available" && !product.soldOut)
+
+      return matchesCategory && matchesGender && matchesParam3 && matchesSoldOut
     })
-  }, [products, activeCategory, activeGender])
+  }, [products, activeCategory, activeGender, activeParam3, activeSoldOut])
 
   return (
     <main className="min-h-screen">
@@ -169,6 +187,52 @@ export default function CatalogoPage() {
                     </div>
                   </>
                 )}
+
+                {/* Nivel 3: Filtro adicional */}
+                {filterGroups.param3.length > 0 && (
+                  <>
+                    <div className="hidden sm:block h-px w-24 mx-auto bg-border" />
+                    <div className="flex flex-wrap justify-center gap-2">
+                      {[ALL_FILTER, ...filterGroups.param3.map((option) => option.value)].map((value) => (
+                        <Button
+                          key={value}
+                          type="button"
+                          size="sm"
+                          variant={activeParam3 === value ? "default" : "outline"}
+                          onClick={() => setActiveParam3(value)}
+                          className={
+                            activeParam3 === value ? "bg-primary text-primary-foreground" : ""
+                          }
+                        >
+                          {value}
+                        </Button>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {/* Filtro de estado agotado */}
+                <div className="hidden sm:block h-px w-24 mx-auto bg-border" />
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    { label: ALL_FILTER, value: ALL_FILTER },
+                    { label: "Disponible", value: "available" },
+                    { label: c.producto.soldOutLabel, value: "soldOut" },
+                  ].map((option) => (
+                    <Button
+                      key={option.value}
+                      type="button"
+                      size="sm"
+                      variant={activeSoldOut === option.value ? "default" : "outline"}
+                      onClick={() => setActiveSoldOut(option.value)}
+                      className={
+                        activeSoldOut === option.value ? "bg-primary text-primary-foreground" : ""
+                      }
+                    >
+                      {option.label}
+                    </Button>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -200,6 +264,7 @@ export default function CatalogoPage() {
                         descripcion={description}
                         imagen={product.image}
                         precio={`$${product.price.toFixed(2)}`}
+                        soldOut={product.soldOut}
                       />
                     </article>
                   )

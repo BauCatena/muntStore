@@ -1,425 +1,824 @@
 [
-    {
-      "id": 1,
-      "name": "Lemon pie",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 22000,
-      "image": "lemon_pie.jpg",
-      "description": "Masa Sableé, crema de limón, merengue suizo"
-    },
-    {
-      "id": 2,
-      "name": "Tarta de durazno y gelatina",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 23000,
-      "image": "tarta_durazno.jpg",
-      "description": "Masa Sableé, crema, durazno, gelatina de durazno"
-    },
-    {
-      "id": 3,
-      "name": "Tarta de ananá y gelatina",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 24000,
-      "image": "tarta_anana.jpg",
-      "description": "Masa Sableé, crema, ananá, gelatina de ananá"
-    },
-    {
-      "id": 4,
-      "name": "Tarta de frutilla y gelatina",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 25000,
-      "image": "tarta_frutilla.jpg",
-      "description": "Masa Sableé, crema, frutilla, gelatina de frutilla"
-    },
-    {
-      "id": 5,
-      "name": "Tarta de frutilla de dulce de leche",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 26000,
-      "image": "tarta_frutilla_ddl.jpg",
-      "description": "Masa Sableé, dulce de leche, crema, frutillas"
-    },
-    {
-      "id": 6,
-      "name": "Tarta de dulce de leche y coco",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 23000,
-      "image": "tarta_ddl_coco.jpg",
-      "description": "Masa Sableé, dulce de leche, coco rallado"
-    },
-    {
-      "id": 7,
-      "name": "Tarta de dulce de leche y chocolate Cabsha",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 22000,
-      "image": "tarta_ddl_chocolate.jpg",
-      "description": "Masa Sableé, dulce de leche, ganache de chocolate semi amargo"
-    },
-    {
-      "id": 8,
-      "name": "Tarta de ricota",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 25000,
-      "image": "tarta_ricota.jpg",
-      "description": "Masa Sableé, ricota y crema, azúcar espolvoreada"
-    },
-    {
-      "id": 9,
-      "name": "Tarta banoffe",
-      "param1": "Pastelería",
-      "param2": "Tartas",
-      "price": 26000,
-      "image": "tarta_banoffe.jpg",
-      "description": "Masa Sableé de vainilla, dulce de leche, banana, salsa toffe, crema, chocolate y nueces pisadas"
-    },
-    {
-      "id": 10,
-      "name": "Cheesecake de frutos rojos",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 30000,
-      "image": "cheesecake_frutos_rojos.jpg",
-      "description": "Base de vainilla, crema de queso, pulpa de frutos rojos, frutos rojos congelados"
-    },
-    {
-      "id": 11,
-      "name": "Cheesecake oreo",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 32000,
-      "image": "cheesecake_oreo.jpg",
-      "description": "Base de galletas oreo, crema de queso con oreo"
-    },
-    {
-      "id": 12,
-      "name": "Chocotorta",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 33000,
-      "image": "chocotorta.jpg",
-      "description": "Capas de galletas de chocolate, crema y dulce de leche, chips de chocolate"
-    },
-    {
-      "id": 13,
-      "name": "Turron",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 28000,
-      "image": "turron.jpg",
-      "description": "Capas de galletas, relleno de dulce de leche, chocolate y avena, coco rallado"
-    },
-    {
-      "id": 14,
-      "name": "Torta de miel",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 26000,
-      "image": "torta_miel.jpg",
-      "description": "Capas de masa de miel, crema de queso"
-    },
-    {
-      "id": 15,
-      "name": "Brownie de frutilla",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 25000,
-      "image": "brownie_frutilla.jpg",
-      "description": "Base de chocolate semi amargo, dulce de leche, crema y frutillas"
-    },
-    {
-      "id": 16,
-      "name": "Brownie de frutos rojos",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 27000,
-      "image": "brownie_frutos_rojos.jpg",
-      "description": "Base de chocolate semi amargo, dulce de leche, crema, pulpa de frutos rojos y frutos rojos"
-    },
-    {
-      "id": 17,
-      "name": "Brownie de merengue",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 22000,
-      "image": "brownie_merengue.jpg",
-      "description": "Base de chocolate semi amargo, dulce de leche, merengue suizo y chocolate"
-    },
-    {
-      "id": 18,
-      "name": "Limón cocado",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 24000,
-      "image": "limon_cocado.jpg",
-      "description": "Base de galletas de coco, crema con leche condensada, coco y ralladura de limón"
-    },
-    {
-      "id": 19,
-      "name": "Pavlova de frutos rojos",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 22000,
-      "image": "pavlova_frutos_rojos.jpg",
-      "description": "Base de merengue, crema, pulpa de frutos rojos, frutos rojos"
-    },
-    {
-      "id": 20,
-      "name": "Rogel",
-      "param1": "Pastelería",
-      "param2": "Postres",
-      "price": 30000,
-      "image": "rogel.jpg",
-      "description": "Base de masa, dulce de leche, merengue suizo"
-    },
-    {
-      "id": 21,
-      "name": "Mini Brownie con dulce de leche crema y frutos rojos",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "brownie.jpg",
-      "description": "Brownie con dulce de leche, crema y frutos rojos"
-    },
-    {
-      "id": 22,
-      "name": "Mini Lemon pie",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "lemon_pie.jpg",
-      "description": "Base de masa, crema de limón y merengue"
-    },
-    {
-      "id": 23,
-      "name": "Mini Tarta de frutilla",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "tarta_frutilla.jpg",
-      "description": "Base de masa, crema pastelera y frutillas"
-    },
-    {
-      "id": 24,
-      "name": "Mini Tarta de durazno",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "tarta_durazno.jpg",
-      "description": "Base de masa, crema y duraznos"
-    },
-    {
-      "id": 25,
-      "name": "Mini Tarta de ananá",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "tarta_ananá.jpg",
-      "description": "Base de masa, crema y ananá"
-    },
-    {
-      "id": 26,
-      "name": "Mini Tarta Cabsha",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "tarta_cabsha.jpg",
-      "description": "Base de masa, dulce de leche y chocolate"
-    },
-    {
-      "id": 27,
-      "name": "Mini Tarta de dulce de leche y coco",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "tarta_ddlcoco.jpg",
-      "description": "Base de masa, dulce de leche y coco rallado"
-    },
-    {
-      "id": 28,
-      "name": "Mini Rogel",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "rogel.jpg",
-      "description": "Capas de masa, dulce de leche y merengue"
-    },
-    {
-      "id": 29,
-      "name": "Mini Chocotorta",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "chocotorta.jpg",
-      "description": "Galletas de chocolate con crema y dulce de leche"
-    },
-    {
-      "id": 30,
-      "name": "Mini Turron",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "turron.jpg",
-      "description": "Postre dulce en capas con crema"
-    },
-    {
-      "id": 31,
-      "name": "Mini tortitas",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5500,
-      "image": "mini_tortitas.jpg",
-      "description": "Pequeñas tortas individuales surtidas"
-    },
-    {
-      "id": 32,
-      "name": "Cheesecake en vaso frutos rojos",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "cheesecake_frutos_rojos.jpg",
-      "description": "Cheesecake con frutos rojos en vaso"
-    },
-    {
-      "id": 33,
-      "name": "Cheesecake en vaso Oreo",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "cheesecake_oreo.jpg",
-      "description": "Cheesecake con galletas Oreo en vaso"
-    },
-    {
-      "id": 34,
-      "name": "Limón cocaco en vaso",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "limon_cocaco.jpg",
-      "description": "Postre de limón en vaso"
-    },
-    {
-      "id": 35,
-      "name": "Torta Oreo en vaso",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "torta_oreo_vaso.jpg",
-      "description": "Torta de Oreo en presentación individual"
-    },
-    {
-      "id": 36,
-      "name": "Tiramisu en vaso",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "tiramisu.jpg",
-      "description": "Postre tiramisú en vaso"
-    },
-    {
-      "id": 37,
-      "name": "Alfajores de maicena",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 4000,
-      "image": "alfajor_maicena.jpg",
-      "description": "Alfajores rellenos de dulce de leche (docena)"
-    },
-    {
-      "id": 38,
-      "name": "Alfajores de miel",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 4500,
-      "image": "alfajor_miel.jpg",
-      "description": "Alfajores de miel rellenos (docena)"
-    },
-    {
-      "id": 39,
-      "name": "Alfajores de chocolate",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "alfajor_chocolate.jpg",
-      "description": "Alfajores bañados en chocolate (docena)"
-    },
-    {
-      "id": 40,
-      "name": "Conitos de dulce de leche",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 5000,
-      "image": "conitos.jpg",
-      "description": "Conitos rellenos de dulce de leche (docena)"
-    },
-    {
-      "id": 41,
-      "name": "Cakepops",
-      "param1": "Pastelería",
-      "param2": "Mini Postres",
-      "price": 6000,
-      "image": "cakepops.jpg",
-      "description": "Bizcochos en palito cubiertos de chocolate (docena)"
-    },
-    {
-      "id": 42,
-      "name": "Pan con semilla de 900 gr",
-      "param1": "Panadería",
-      "param2": "Harina Integral",
-      "price": 4000,
-      "image": "cakepops.jpg",
-      "description": "Pan 100% integral con semillas de sesamo, lino, girasol y zapallo"
-    },
-    {
-      "id": 43,
-    "name": "Pan con semilla de 1,8 kg",
-    "param1": "Panadería",
-    "param2": "Harina Integral",
-    "price": 6000,
-    "image": "cakepops.jpg",
-    "description": "Pan 100% integral con semillas de sesamo, lino, girasol y zapallo"
+  {
+    "id": 1,
+    "name": "Pantu Sox",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Azul",
+    "price": 18000,
+    "image": "/assets/medias/pantu/1.webp",
+    "images": [
+                "/assets/medias/pantu/1.webp",
+                "/assets/medias/pantu/2.webp",
+                "/assets/medias/pantu/3.webp",
+                "/assets/medias/pantu/4.webp"
+              ],
+    "soldOut": false,
+    "description": "Media abrigada para usar sin calzado. Interior con corderito de microfibra y antideslizante en la planta del pie para mejor agarre"
+  },
+  {
+    "id": 2,
+    "name": "Compresión deportiva (M)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3":"Negro",
+    "price": 15400,
+    "image": "/assets/medias/compresión/te232b/1n.webp",
+    "images": ["/assets/medias/compresión/te232b/1n.webp", "/assets/medias/compresión/te232b/2n.webp", "/assets/medias/compresión/te232b/3n.webp"],
+    "soldOut": false,
+    "description": "Medias de compresión pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie. Puntos de apoyo sectorizados con mayor densidad para absorber impactos, talón y puntera con canales de ventilación y reforzados. Costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 3,
+    "name": "Compresión deportiva (L)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3": "Negro",
+    "price": 15400,
+    "image": "/assets/medias/compresión/te232b/1b.webp",
+    "images": ["/assets/medias/compresión/te232b/1b.webp", "/assets/medias/compresión/te232b/2b.webp", "/assets/medias/compresión/te232b/3b.webp"],
+    "soldOut": false,
+    "description": "Medias de compresión pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie. Puntos de apoyo sectorizados con mayor densidad para absorber impactos, talón y puntera con canales de ventilación y reforzados. Costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 4,
+    "name": "RomBrock (Talle)",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Negro",
+    "price": 8300,
+    "image": "/assets/medias/básicas/de376b/1n.webp",
+    "images": ["/assets/medias/básicas/de376b/1n.webp","/assets/medias/básicas/de376b/2n.webp","/assets/medias/básicas/de376b/3n.webp"],
+    "soldOut": false,
+    "description": "Puño doble elastizado, caña y pie anatómicos. Tejido respirable. Puntos de apoyo sectorizados con mayor densidad para absorber impactos. Costura extra plana, talón y puntera reforzado. Ajuste y calce perfecto gracias al agregado de spandex. Secado rápido gracias a su composición."
+  },
+  {
+    "id": 5,
+    "name": "RomBrock (Talle)",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Blanco",
+    "price": 8300,
+    "image": "/assets/medias/básicas/de376b/1b.webp",
+    "images": ["/assets/medias/básicas/de376b/1b.webp","/assets/medias/básicas/de376b/2b.webp","/assets/medias/básicas/de376b/3b.webp"],
+    "soldOut": false,
+    "description": "Puño doble elastizado, caña y pie anatómicos. Tejido respirable. Puntos de apoyo sectorizados con mayor densidad para absorber impactos. Costura extra plana, talón y puntera reforzado. Ajuste y calce perfecto gracias al agregado de spandex. Secado rápido gracias a su composición."
+  },
+  {
+    "id": 6,
+    "name": "Compresión MedFyl (Talle)",
+    "param1": "Medias",
+    "param2": "Compresión MedFyl",
+    "param3": "Negro",
+    "price": 17499,
+    "image": "/assets/medias/medfyl/te201/4n.webp",
+    "images": ["/assets/medias/medfyl/te201/4n.webp", "/assets/medias/medfyl/te201/5n.webp", "/assets/medias/medfyl/te201/6n.webp"],
+    "soldOut": false,
+    "description": "Media de compresión pensada para el deportista. Desarrollada para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Tejida con hilado MEDFYL que cuenta con la propiedad antibacteriana y antiviral que combate el mal olor. Colabora en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie, punto de apoyo sectorizados con mayor densidad para absorber impactos. Talón y punteras reforzados, costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 7,
+    "name": "Compresión Mundial (Talle)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3": "Azul",
+    "price": 12500,
+    "image": "/assets/medias/compresión/te243c/1.webp",
+    "images": [],
+    "soldOut": false,
+    "description": "Medias de compresión pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie. Puntos de apoyo sectorizados con mayor densidad para absorber impactos, talón y puntera con canales de ventilación y reforzados. Costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 8,
+    "name": "Compresión Graduada (Talle)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3": "Negro",
+    "price": 20500,
+    "image": "/assets/medias/compresión/me58b/1n.webp",
+    "images": ["/assets/medias/compresión/me58b/1n.webp", "/assets/medias/compresión/me58b/2n.webp", "/assets/medias/compresión/me58b/3n.webp"],
+    "soldOut": false,
+    "description": "Desarrolladas para contribuir a la recirculación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. El agregado de puntos de contacto permite la relajación de las tensiones propias del pie. Con protector de tendón de Aquiles que reduce la incidencia de los puntos de presión y el riesgo de lesiones por roce y moretones. Puño doble, con lengüeta incorporada para mejor calce. Además, cuentan con refuerzos en puntos claves para la práctica de Crossfit."
+  },
+  {
+    "id": 9,
+    "name": "Estabilizadora de tobillo (Talle)",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Negro",
+    "price": 20000,
+    "image": "/assets/medias/básicas/fu37b/1n.webp",
+    "images": ["/assets/medias/básicas/fu37b/1n.webp", "/assets/medias/básicas/fu37b/2n.webp", "/assets/medias/básicas/fu37b/3n.webp", "/assets/medias/básicas/fu37b/4n.webp", "/assets/medias/básicas/fu37b/info.jpeg", "/assets/medias/básicas/fu37b/warning.webp"],
+    "soldOut": false,
+    "description": "Medias estabilizadoras de tobillo pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo, a la contención de los músculos y a la estabilidad de los ligamentos laterales del tobillo. Colabora en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, puntos de apoyo sectorizados con mayor densidad para absorber impactos. Talón y puntera reforzados, costura de puntera extra plana. Secado rápido gracias a su composición."
+  },
+  {
+    "id": 10,
+    "name": "Compresión deportiva (Talle)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3": "Coral",
+    "price": 13500,
+    "image": "/assets/medias/compresión/te215c/1c.webp",
+    "images": ["/assets/medias/compresión/te215c/1c.webp", "/assets/medias/compresión/te215c/2c.webp", "/assets/medias/compresión/te215c/3c.webp", "/assets/medias/compresión/te215c/info.jpeg"],
+    "soldOut": false,
+    "description": "Medias de compresión pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie. Puntos de apoyo sectorizados con mayor densidad para absorber impactos, talón y puntera con canales de ventilación y reforzados. Costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 11,
+    "name": "MedFyl Invierno",
+    "param1": "Medias",
+    "param2": "Compresión MedFyl",
+    "param3": "Blanco",
+    "price": 19400,
+    "image": "/assets/medias/medfyl/te240/1b.webp",
+    "images": ["/assets/medias/medfyl/te240/1b.webp", "/assets/medias/medfyl/te240/2b.webp", "/assets/medias/medfyl/te240/3b.webp"],
+    "soldOut": false,
+    "description": ""
+  },
+  {
+    "id": 12,
+    "name": "Sox x Cove",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Verde Manzana",
+    "price": 9500,
+    "image": "/assets/medias/básicas/soxCove/1vm.webp",
+    "images": ["/assets/medias/básicas/soxCove/1vm.webp"],
+    "soldOut": false,
+    "description": "Destaca en cada paso con este nuevo lanzamiento que fusiona estilo y fuerza, con unos diseños vibrantes y modernos que irradian energía y distinción. Son el complemento esencial para tu outfit. Fabricadas con materiales de alta calidad, ofrecen un ajuste perfecto gracias a su banda elástica, mientras el talón y la puntera reforzados garantizan durabilidad. Estas no son solo medias, son una declaración de estilo y actitud. ¡Deja tu huella a cada paso con SOX x Cove!"
+  },
+  {
+    "id": 13,
+    "name": "Básica deportiva (Talle)",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Gris",
+    "price": 7800,
+    "image": "/assets/medias/básicas/de341/1g.webp",
+    "images": ["/assets/medias/básicas/de341/1g.webp", "/assets/medias/básicas/de341/2g.webp", "/assets/medias/básicas/de341/3g.webp"],
+    "soldOut": false,
+    "description": "Puño doble, caña corta elastizada para lograr un calce perfecto. Sectores específicos de ventilación para evitar el calentamiento del pie. Talón y puntera reforzados, costura de puntera extra plana. Secado rápido gracias a su composición."
+  },
+  {
+    "id": 14,
+    "name": "Compresión deportiva (Talle)",
+    "param1": "Medias",
+    "param2": "Compresión",
+    "param3": "Celeste",
+    "price": 13500,
+    "image": "/assets/medias/compresión/te215c/1p.webp",
+    "images": ["/assets/medias/compresión/te215c/1p.webp", "/assets/medias/compresión/te215c/2p.webp", "/assets/medias/compresión/te215c/3p.webp"],
+    "soldOut": false,
+    "description": "Medias de compresión pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos. Colaboran en la prevención de la fascitis plantar por la compresión transmetatarsal. Puño doble elastizado, caña y pie anatómicos, sectores específicos de ventilación para evitar el calentamiento del pie. Puntos de apoyo sectorizados con mayor densidad para absorber impactos, talón y puntera con canales de ventilación y reforzados. Costura de puntera extra plana, secado rápido gracias a su composición."
+  },
+  {
+    "id": 15,
+    "name": "Sox x Cove",
+    "param1": "Medias",
+    "param2": "Básicas",
+    "param3": "Marrón",
+    "price": 9500,
+    "image": "/assets/medias/básicas/soxCove/1m.webp",
+    "images": ["/assets/medias/básicas/soxCove/1m.webp"],
+    "soldOut": false,
+    "description": "Destaca en cada paso con este nuevo lanzamiento que fusiona estilo y fuerza, con unos diseños vibrantes y modernos que irradian energía y distinción. Son el complemento esencial para tu outfit. Fabricadas con materiales de alta calidad, ofrecen un ajuste perfecto gracias a su banda elástica, mientras el talón y la puntera reforzados garantizan durabilidad. Estas no son solo medias, son una declaración de estilo y actitud. ¡Deja tu huella a cada paso con SOX x Cove!"
+  },
+  {
+    "id": 16,
+    "name": "Manguitas de compresión (M1)",
+    "param1": "Manguitas",
+    "param2": "Compresión",
+    "param3": "Naranja",
+    "price": 13200,
+    "image": "/assets/mangas/manga-comp-n.webp",
+    "images": ["/assets/mangas/manga-comp-n.webp","/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de compresión graduada pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos, logrando mejor rendimiento. Puño superior e inferior doble. Secado rápido gracias a su composición. Ajuste y calce anatómicos. "
+  },
+  {
+    "id": 17,
+    "name": "Manguitas de compresión (M1)",
+    "param1": "Manguitas",
+    "param2": "Compresión",
+    "param3": "Blanco",
+    "price": 13200,
+    "image": "/assets/mangas/manga-comp-b.webp",
+    "images": ["/assets/mangas/manga-comp-b.webp","/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de compresión graduada pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos, logrando mejor rendimiento. Puño superior e inferior doble. Secado rápido gracias a su composición. Ajuste y calce anatómicos. "
+  },
+  {
+    "id": 18,
+    "name": "Manguitas de compresión (M1)",
+    "param1": "Manguitas",
+    "param2": "Compresión",
+    "param3": "Azul",
+    "price": 13200,
+    "image": "/assets/mangas/manga-comp-a.webp",
+    "images": ["/assets/mangas/manga-comp-a.webp","/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de compresión graduada pensadas para el deportista. Desarrolladas para contribuir a la re-circulación del sistema sanguíneo y a la contención de los músculos, logrando mejor rendimiento. Puño superior e inferior doble. Secado rápido gracias a su composición. Ajuste y calce anatómicos. "
+  },
+  {
+    "id": 19,
+    "name": "Manguitas (M1)",
+    "param1": "Manguitas",
+    "param2": "Básicas",
+    "param3": "Blancas",
+    "price": 12000,
+    "image": "/assets/mangas/manga-b.webp",
+    "images": [ "/assets/mangas/manga-b.webp", "/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de abrigo sin compresión graduada pensadas para el deportista. Puño superior e inferior doble. Gracias a su composición permite un secado rápido de las mismas. Además poseen calce perfecto gracias al agregado de spandex."
+  },
+  {
+    "id": 20,
+    "name": "Manguitas (M1)",
+    "param1": "Manguitas",
+    "param2": "Básicas",
+    "param3": "Negras",
+    "price": 12000,
+    "image": "/assets/mangas/manga-n.webp",
+    "images": [ "/assets/mangas/manga-n.webp", "/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de abrigo sin compresión graduada pensadas para el deportista. Puño superior e inferior doble. Gracias a su composición permite un secado rápido de las mismas. Además poseen calce perfecto gracias al agregado de spandex."
+  },
+  {
+    "id": 21,
+    "name": "Manguitas (M2)",
+    "param1": "Manguitas",
+    "param2": "Básicas",
+    "param3": "Negras",
+    "price": 12000,
+    "image": "/assets/mangas/manga-n.webp",
+    "images": [ "/assets/mangas/manga-n.webp", "/sizes/talles-mangas.jpeg"],
+    "soldOut": false,
+    "description": "Manguitas de abrigo sin compresión graduada pensadas para el deportista. Puño superior e inferior doble. Gracias a su composición permite un secado rápido de las mismas. Además poseen calce perfecto gracias al agregado de spandex."
+  },
+  {
+    "id": 22,
+    "name": "Remera Térmica (S)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Morado",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/ros12.webp",
+    "images": [
+                "/assets/termicas-mujer/ros1.webp",
+                "/assets/termicas-mujer/ros2.webp",
+                "/assets/termicas-mujer/ros12.webp",
+                "/assets/termicas-mujer/ros3.webp",
+                "/assets/termicas-mujer/ros8.webp",
+                "/assets/termicas-mujer/ros9.webp",
+                "/assets/termicas-mujer/ros6.webp",
+                "/assets/termicas-mujer/ros7.webp",
+                "/assets/termicas-mujer/ros4.webp",
+                "/assets/termicas-mujer/ros5.webp",
+                "/assets/termicas-mujer/ros10.webp",
+                "/assets/termicas-mujer/ros11.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 23,
+    "name": "Remera Térmica (S)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/neg2.webp",
+    "images": [
+                "/assets/termicas-mujer/neg2.webp",
+                "/assets/termicas-mujer/neg4.webp",
+                "/assets/termicas-mujer/neg3.webp",
+                "/assets/termicas-mujer/neg1.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 24,
+    "name": "Remera Térmica (S)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Moline",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/mol1.webp",
+    "images": [
+                "/assets/termicas-mujer/mol1.webp",
+                "/assets/termicas-mujer/mol4.webp",
+                "/assets/termicas-mujer/mol2.webp",
+                "/assets/termicas-mujer/mol3.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 25,
+    "name": "Remera Térmica (M)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Morado",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/ros2.webp",
+    "images": [
+                "/assets/termicas-mujer/ros2.webp",
+                "/assets/termicas-mujer/ros1.webp",
+                "/assets/termicas-mujer/ros3.webp",
+                "/assets/termicas-mujer/ros6.webp",
+                "/assets/termicas-mujer/ros7.webp",
+                "/assets/termicas-mujer/ros8.webp",
+                "/assets/termicas-mujer/ros9.webp",
+                "/assets/termicas-mujer/ros10.webp",
+                "/assets/termicas-mujer/ros11.webp",
+                "/assets/termicas-mujer/ros4.webp",
+                "/assets/termicas-mujer/ros5.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 26,
+    "name": "Remera Térmica (M)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Moline",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/mol2.webp",
+    "images": [
+                "/assets/termicas-mujer/mol2.webp",
+                "/assets/termicas-mujer/mol4.webp",
+                "/assets/termicas-mujer/mol3.webp",
+                "/assets/termicas-mujer/mol1.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 27,
+    "name": "Remera Térmica (L)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/neg6.webp",
+    "images": [
+                "/assets/termicas-mujer/neg6.webp",
+                "/assets/termicas-mujer/neg3.webp",
+                "/assets/termicas-mujer/neg2.webp",
+                "/assets/termicas-mujer/neg4.webp",
+                "/assets/termicas-mujer/neg7.webp",
+                "/assets/termicas-mujer/neg1.webp",
+                "/assets/termicas-mujer/neg5.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 28,
+    "name": "Remera Térmica (M)",
+    "param1": "Seamless",
+    "param2": "Térmicas de mujer",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termicas-mujer/neg1.webp",
+    "images": [
+                "/assets/termicas-mujer/neg1.webp",
+                "/assets/termicas-mujer/neg5.webp",
+                "/assets/termicas-mujer/neg7.webp",
+                "/assets/termicas-mujer/neg4.webp",
+                "/assets/termicas-mujer/neg2.webp",
+                "/assets/termicas-mujer/neg3.webp",
+                "/assets/termicas-mujer/neg6.webp",
+                "/sizes/info-termicas-mujer.jpeg",
+                "/sizes/talles-remera-mujer.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 29,
+    "name": "Calza Larga (M)",
+    "param1": "Seamless",
+    "param2": "Calza de mujer",
+    "param3": "Negro",
+    "price": 46000,
+    "image": "/assets/calza-running/1.webp",
+    "images": [
+                "/assets/calza-running/1.webp",
+                "/assets/calza-running/2.webp",
+                "/assets/calza-running/4.webp",
+                "/assets/calza-running/5.webp",
+                "/assets/calza-running/6.webp",
+                "/sizes/talles-medidas-mujer.jpeg",
+                "/sizes/talles-mujer-calza.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Supera tus límites con las calzas de running ICONSOX, diseñadas exclusivamente para runners que buscan funcionalidad, confort y rendimiento. Con tecnología Seamless y bolsillos estratégicos, estas calzas te acompañan en tus sesiones más intensas, ofreciendo libertad de movimiento, sujeción y espacio para todo lo que necesites llevar."
+  },
+  {
+    "id": 30,
+    "name": "Calza Ciclista (M)",
+    "param1": "Seamless",
+    "param2": "Calza de mujer",
+    "param3": "Negro",
+    "price": 35000,
+    "image": "/assets/calza-ciclista/1.webp",
+    "images": [
+                "/assets/calza-ciclista/1.webp",
+                "/assets/calza-ciclista/3.webp",
+                "/assets/calza-ciclista/2.webp",
+                "/assets/calza-ciclista/4.webp",
+                "/assets/calza-ciclista/6.webp",
+                "/sizes/talles-medidas-mujer.jpeg",
+                "/sizes/talles-mujer-calza.jpeg"
+              ],
+    "soldOut": true,
+    "description": "Llevá tu rendimiento y estilo al siguiente nivel con las calzas seamless ICONSOX, creadas para ofrecer un calce perfecto, libertad de movimiento y un look de entrenamiento impecable. Ya sea para running, gym, ciclismo, o cualquier actividad deportiva, su diseño sin costuras y su tecnología de expulsión de humedad las hacen ideales para cualquier deporte, asegurando que te veas y te sientas bien mientras entrenas."
+  },
+  {
+    "id": 31,
+    "name": "Buzo (S)",
+    "param1": "Seamless",
+    "param2": "Buzo de hombre",
+    "param3": "Negro",
+    "price": 60000,
+    "image": "/assets/buzo-hombre/neg1.webp",
+    "images": [
+                "/assets/buzo-hombre/neg1.webp",
+                "/assets/buzo-hombre/neg2.webp",
+                "/assets/buzo-hombre/neg3.webp",
+                "/assets/buzo-hombre/neg5.webp",
+                "/assets/buzo-hombre/neg4.webp",
+                "/sizes/talles-medidas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg"
+                
+              ],
+    "soldOut": false,
+    "description": "El Buzo Soft de secado rápido está diseñado para acompañarte en todo momento: antes, durante y después del entrenamiento. Su corte holgado y versátil te brinda comodidad y libertad, ya sea para entrenar o relajarte. Los detalles reflectivos, el cuello regulable y las mangas con orificios para pulgares suman estilo y funcionalidad, asegurando que nada detenga tu ritmo."
+  },
+  {
+    "id": 32,
+    "name": "Buzo (M)",
+    "param1": "Seamless",
+    "param2": "Buzo de hombre",
+    "param3": "Negro",
+    "price": 60000,
+    "image": "/assets/buzo-hombre/neg2.webp",
+    "images": [
+                "/assets/buzo-hombre/neg2.webp",
+                "/assets/buzo-hombre/neg1.webp",
+                "/assets/buzo-hombre/neg3.webp",
+                "/assets/buzo-hombre/neg4.webp",
+                "/assets/buzo-hombre/neg5.webp",
+                "/sizes/talles-medidas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg"
+                
+              ],
+    "soldOut": true,
+    "description": "El Buzo Soft de secado rápido está diseñado para acompañarte en todo momento: antes, durante y después del entrenamiento. Su corte holgado y versátil te brinda comodidad y libertad, ya sea para entrenar o relajarte. Los detalles reflectivos, el cuello regulable y las mangas con orificios para pulgares suman estilo y funcionalidad, asegurando que nada detenga tu ritmo."
+  },
+  {
+    "id": 33,
+    "name": "Buzo (XL)",
+    "param1": "Seamless",
+    "param2": "Buzo de hombre",
+    "param3": "Azul",
+    "price": 60000,
+    "image": "/assets/buzo-hombre/azu2.webp",
+    "images": [
+                "/assets/buzo-hombre/azu2.webp",
+                "/assets/buzo-hombre/azu3.webp",
+                "/assets/buzo-hombre/azu4.webp",
+                "/assets/buzo-hombre/azu5.webp",
+                "/sizes/talles-medidas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg"
+                
+              ],
+    "soldOut": true,
+    "description": "El Buzo Soft de secado rápido está diseñado para acompañarte en todo momento: antes, durante y después del entrenamiento. Su corte holgado y versátil te brinda comodidad y libertad, ya sea para entrenar o relajarte. Los detalles reflectivos, el cuello regulable y las mangas con orificios para pulgares suman estilo y funcionalidad, asegurando que nada detenga tu ritmo."
+  },
+  {
+    "id": 34,
+    "name": "Remera Térmica (S)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Azul",
+    "price": 45000,
+    "image": "/assets/termica-hombre/mar2.webp",
+    "images": [
+                "/assets/termica-hombre/mar2.webp",
+                "/assets/termica-hombre/mar1.webp",
+                "/assets/termica-hombre/mar4.webp",
+                "/assets/termica-hombre/mar3.webp",
+                "/assets/termica-hombre/mar5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 35,
+    "name": "Remera Térmica (S)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Marrón",
+    "price": 45000,
+    "image": "/assets/termica-hombre/mr1.webp",
+    "images": [
+                "/assets/termica-hombre/mr1.webp",
+                "/assets/termica-hombre/mr2.webp",
+                "/assets/termica-hombre/mr3.webp",
+                "/assets/termica-hombre/mr4.webp",
+                "/assets/termica-hombre/mr5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 36,
+    "name": "Remera Térmica (XL)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Azul",
+    "price": 45000,
+    "image": "/assets/termica-hombre/mar1.webp",
+    "images": [
+                "/assets/termica-hombre/mar1.webp",
+                "/assets/termica-hombre/mar2.webp",
+                "/assets/termica-hombre/mar3.webp",
+                "/assets/termica-hombre/mar4.webp",
+                "/assets/termica-hombre/mar5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 37,
+    "name": "Calza Larga (S)",
+    "param1": "Seamless",
+    "param2": "Calza de mujer",
+    "param3": "Azul",
+    "price": 46000,
+    "image": "/assets/calza-running/11.webp",
+    "images": [
+                "/assets/calza-running/11.webp",
+                "/assets/calza-running/15.webp",
+                "/assets/calza-running/12.webp",
+                "/assets/calza-running/13.webp",
+                "/assets/calza-running/14.webp",
+                "/sizes/talles-medidas-mujer.jpeg",
+                "/sizes/talles-mujer-calza.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Supera tus límites con las calzas de running ICONSOX, diseñadas exclusivamente para runners que buscan funcionalidad, confort y rendimiento. Con tecnología Seamless y bolsillos estratégicos, estas calzas te acompañan en tus sesiones más intensas, ofreciendo libertad de movimiento, sujeción y espacio para todo lo que necesites llevar."
+  },
+  {
+    "id": 38,
+    "name": "Remera Térmica (XL)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termica-hombre/neg1.webp",
+    "images": [
+                "/assets/termica-hombre/neg1.webp",
+                "/assets/termica-hombre/neg4.webp",
+                "/assets/termica-hombre/neg2.webp",
+                "/assets/termica-hombre/neg3.webp",
+                "/assets/termica-hombre/neg5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 39,
+    "name": "Remera Térmica (L)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termica-hombre/neg2.webp",
+    "images": [
+                "/assets/termica-hombre/neg2.webp",
+                "/assets/termica-hombre/neg5.webp",
+                "/assets/termica-hombre/neg4.webp",
+                "/assets/termica-hombre/neg1.webp",
+                "/assets/termica-hombre/neg3.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 40,
+    "name": "Remera Térmica (M)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Negro",
+    "price": 45000,
+    "image": "/assets/termica-hombre/neg1.webp",
+    "images": [
+                "/assets/termica-hombre/neg1.webp",
+                "/assets/termica-hombre/neg2.webp",
+                "/assets/termica-hombre/neg3.webp",
+                "/assets/termica-hombre/neg4.webp",
+                "/assets/termica-hombre/neg5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 41,
+    "name": "Remera Térmica (XL)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Azul",
+    "price": 45000,
+    "image": "/assets/termica-hombre/azu1.webp",
+    "images": [
+                "/assets/termica-hombre/azu1.webp",
+                "/assets/termica-hombre/azu2.webp",
+                "/assets/termica-hombre/azu3.webp",
+                "/assets/termica-hombre/azu4.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 42,
+    "name": "Remera Térmica (L)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Azul",
+    "price": 45000,
+    "image": "/assets/termica-hombre/mar5.webp",
+    "images": [
+                "/assets/termica-hombre/mar5.webp",
+                "/assets/termica-hombre/mar1.webp",
+                "/assets/termica-hombre/mar2.webp",
+                "/assets/termica-hombre/mar3.webp",
+                "/assets/termica-hombre/mar4.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
+  },
+  {
+    "id": 43,
+    "name": "Remera Térmica (L)",
+    "param1": "Seamless",
+    "param2": "Térmicas de hombre",
+    "param3": "Gris",
+    "price": 45000,
+    "image": "/assets/termica-hombre/gr1.webp",
+    "images": [
+                "/assets/termica-hombre/gr1.webp",
+                "/assets/termica-hombre/gr2.webp",
+                "/assets/termica-hombre/gr3.webp",
+                "/assets/termica-hombre/gr4.webp",
+                "/assets/termica-hombre/gr5.webp",
+                "/sizes/info-termicas-hombre.jpeg",
+                "/sizes/talles-remeras-hombre.jpeg",
+                "/sizes/talles-medidas-hombre.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Preparate para enfrentar las condiciones más extremas en cualquier terreno con la remera térmica sin costura ICONSOX, diseñada para ofrecer máxima protección en temperaturas bajas. Con tecnología Seamless y materiales de alta calidad, esta prenda es ideal para deportes de invierno como ski, trekking, senderismo, trail running y más, garantizando abrigo y libertad de movimiento."
   },
   {
     "id": 44,
-    "name": "Focaccias",
-    "param1": "Panadería",
-    "param2": "Harina Blanca",
-    "price": 6000,
-    "image": "cakepops.jpg",
-    "description": "Saborizadas de: aceitunas, cebolla, cherris y albahaca, ajo"
+    "name": "Calza Larga (L)",
+    "param1": "Seamless",
+    "param2": "Calza de mujer",
+    "param3": "Negro",
+    "price": 46000,
+    "image": "/assets/calza-running/2.webp",
+    "images": [
+                "/assets/calza-running/4.webp",
+                "/assets/calza-running/5.webp",
+                "/assets/calza-running/2.webp",
+                "/assets/calza-running/1.webp",
+                "/sizes/talles-medidas-mujer.jpeg",
+                "/sizes/talles-mujer-calza.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Supera tus límites con las calzas de running ICONSOX, diseñadas exclusivamente para runners que buscan funcionalidad, confort y rendimiento. Con tecnología Seamless y bolsillos estratégicos, estas calzas te acompañan en tus sesiones más intensas, ofreciendo libertad de movimiento, sujeción y espacio para todo lo que necesites llevar."
   },
   {
     "id": 45,
-    "name": "Scones",
-    "param1": "Panadería",
-    "param2": "Harina Blanca",
-    "price": 6000,
-    "image": "cakepops.jpg",
-    "description": "Precio por 6 unidades. Rellenos de queso"
+    "name": "Calza Larga (L)",
+    "param1": "Seamless",
+    "param2": "Calza de mujer",
+    "param3": "Azul",
+    "price": 46000,
+    "image": "/assets/calza-running/13.webp",
+    "images": [
+                "/assets/calza-running/13.webp",
+                "/assets/calza-running/11.webp",
+                "/assets/calza-running/12.webp",
+                "/assets/calza-running/15.webp",
+                "/assets/calza-running/14.webp",
+                "/sizes/talles-medidas-mujer.jpeg",
+                "/sizes/talles-mujer-calza.jpeg"
+              ],
+    "soldOut": false,
+    "description": "Supera tus límites con las calzas de running ICONSOX, diseñadas exclusivamente para runners que buscan funcionalidad, confort y rendimiento. Con tecnología Seamless y bolsillos estratégicos, estas calzas te acompañan en tus sesiones más intensas, ofreciendo libertad de movimiento, sujeción y espacio para todo lo que necesites llevar."
   },
   {
-  "id": 46,
-  "name": "Tortas con crema chantilly",
-  "param1": "Pastelería",
-  "param2": "Tortas",
-  "price": 45000,
-  "image": "cakepops.jpg",
-  "description": "Consultar para más información. El precio es precio mínimo"
+    "id": 46,
+    "name": "Top Deportivo (M)",
+    "param1": "Seamless",
+    "param2": "Top Deportivo",
+    "param3": "Negro",
+    "price": 32000,
+    "image": "/assets/top-d-n/top-negro5.webp",
+    "images": [
+               "/assets/top-d-n/top-negro1.webp",
+               "/assets/top-d-n/top-negro2.webp",
+               "/assets/top-d-n/top-negro3.webp",
+               "/assets/top-d-n/top-negro4.webp",
+               "/assets/top-d-n/top-negro5.webp", 
+               "/sizes/talles-medidas-mujer.jpeg",
+               "/sizes/talles-top.jpeg",
+               "/sizes/top-info.jpeg"
+              ],
+    "soldOut": false,
+    "description": "El top deportivo seamless ICONSOX combina sujeción y comodidad para acompañarte en tus actividades más intensas, desde el gimnasio hasta el running. Su diseño sin costuras te brinda soporte sin fricción, manteniéndote fresca y cómoda durante todo el entrenamiento."
   },
   {
     "id": 47,
-    "name": "Tortas con butter cream",
-    "param1": "Pastelería",
-    "param2": "Tortas",
-    "price": 50000,
-    "image": "cakepops.jpg",
-    "description": "Consultar para más información. El precio es precio mínimo"
-    }
+    "name": "Top Deportivo (L)",
+    "param1": "Seamless",
+    "param2": "Top Deportivo",
+    "param3": "Negro",
+    "price": 32000,
+    "image": "/assets/top-d-n/top-negro2.webp",
+    "images": [
+               "/assets/top-d-n/top-negro1.webp",
+               "/assets/top-d-n/top-negro4.webp",
+               "/assets/top-d-n/top-negro2.webp",
+               "/assets/top-d-n/top-negro3.webp",
+               "/assets/top-d-n/top-negro5.webp", 
+               "/sizes/talles-medidas-mujer.jpeg",
+               "/sizes/talles-top.jpeg",
+               "/sizes/top-info.jpeg"
+              ],
+    "soldOut": false,
+    "description": "El top deportivo seamless ICONSOX combina sujeción y comodidad para acompañarte en tus actividades más intensas, desde el gimnasio hasta el running. Su diseño sin costuras te brinda soporte sin fricción, manteniéndote fresca y cómoda durante todo el entrenamiento."
+  },
+  {
+    "id": 48,
+    "name": "Top Deportivo (M)",
+    "param1": "Seamless",
+    "param2": "Top Deportivo",
+    "param3": "Azul",
+    "price": 32000,
+    "image": "/assets/top-d-a-m/top-azul-marino1.webp",
+    "images": ["/assets/top-d-a-m/top-azul-marino1.webp",
+               "/assets/top-d-a-m/top-azul-marino2.webp",
+               "/assets/top-d-a-m/top-azul-marino3.webp",
+               "/assets/top-d-a-m/top-azul-marino4.webp",
+               "/assets/top-d-a-m/top-azul-marino5.webp",
+               "/sizes/talles-medidas-mujer.jpeg",
+               "/sizes/talles-top.jpeg",
+               "/sizes/top-info.jpeg"
+              ],
+    "soldOut": false,
+    "description": "El top deportivo seamless ICONSOX combina sujeción y comodidad para acompañarte en tus actividades más intensas, desde el gimnasio hasta el running. Su diseño sin costuras te brinda soporte sin fricción, manteniéndote fresca y cómoda durante todo el entrenamiento."
+  }
 ]
