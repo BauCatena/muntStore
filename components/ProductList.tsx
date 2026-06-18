@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useMemo, useState } from "react"
-import { Glasses, Sun, User, Users, Package } from "lucide-react"
+import { Glasses, Shirt, Snowflake, Footprints, User, Users } from "lucide-react"
 import { OptikHoverButton } from "@/components/optik-hover-button"
 import type { SiteConfig } from "@/data/config"
 import type { Product, ProductInput } from "@/types/product"
@@ -157,8 +157,9 @@ const slugify = (text: string) =>
 
 const getCategoryIcon = (category: string) => {
   const normalized = category.toLowerCase()
-  if (normalized.includes("sol")) return <Sun className="w-8 h-8 text-background" />
-  if (normalized.includes("accesorio")) return <Package className="w-8 h-8 text-background" />
+  if (normalized.includes("medias")) return <Footprints className="w-8 h-8 text-background" />
+  if (normalized.includes("manguitas")) return <Snowflake className="w-8 h-8 text-background" />
+  if (normalized.includes("seamless")) return <Shirt className="w-8 h-8 text-background" />
   return <Glasses className="w-8 h-8 text-background" />
 }
 

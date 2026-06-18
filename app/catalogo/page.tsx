@@ -1,40 +1,40 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { ArrowLeft, ShoppingBag } from "lucide-react"
 
 import { Header } from "@/components/Header"
 import { Card } from "@/components/Card"
+import { MobileCatalogFilters } from "@/components/MobileCatalogFilters"
 import { Button } from "@/components/ui/button"
 import { config } from "@/data/config"
+import {
+  ALL_FILTER,
+  buildCatalogQueryString,
+  filterProducts,
+  getFilterGroups,
+  parseFiltersFromSearchParams,
+  type CatalogFilters,
+} from "@/lib/catalog-filters"
 import { loadProductsFromConfig } from "@/lib/load-products"
 import type { Product } from "@/types/product"
 
 const { catalogo: c } = config
 
-const ALL_FILTER = "Todos"
-const normalizeFilter = (value: string | null) => value?.trim().toLowerCase() ?? ""
-
 export default function CatalogoPage() {
+  const router = useRouter()
   const searchParams = useSearchParams()
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
-
-  // Leemos los parámetros iniciales de la URL
-  const initialCategory = searchParams.get("categoria") || searchParams.get("param1")
-  const initialGender = searchParams.get("genero") || searchParams.get("param2")
-  const initialParam3 = searchParams.get("param3")
-  const initialSoldOut = searchParams.get("soldOut")
-
-  // Estados para los botones dinámicos
-  const [activeCategory, setActiveCategory] = useState(initialCategory || ALL_FILTER)
-  const [activeGender, setActiveGender] = useState(initialGender || ALL_FILTER)
-  const [activeParam3, setActiveParam3] = useState(initialParam3 || ALL_FILTER)
-  const [activeSoldOut, setActiveSoldOut] = useState(
-    initialSoldOut === "true" ? "soldOut" : initialSoldOut === "false" ? "available" : ALL_FILTER
+  const [filters, setFilters] = useState<CatalogFilters>(() =>
+    parseFiltersFromSearchParams(searchParams)
   )
+
+  useEffect(() => {
+    setFilters(parseFiltersFromSearchParams(searchParams))
+  }, [searchParams])
 
   useEffect(() => {
     let cancelled = false
@@ -55,58 +55,43 @@ export default function CatalogoPage() {
     }
   }, [])
 
-  // Filtros en cascada: El Nivel 2 depende de lo seleccionado en el Nivel 1
-  const filterGroups = useMemo(() => {
-    // 1. Extraer Nivel 1: Siempre es el total de la base de datos (Ej: Panadería, Pastelería)
-    const uniqueCategories = [...new Set(products.map((p) => p.param1))].filter(Boolean)
+  const applyFilters = useCallback(
+    (next: CatalogFilters) => {
+      setFilters(next)
+      const query = buildCatalogQueryString(next)
+      router.replace(query ? `/catalogo?${query}` : "/catalogo", { scroll: false })
+    },
+    [router]
+  )
 
-    // 2. Extraer Nivel 2: Depende de lo que esté activo en el Nivel 1
-    let productsForLevel2 = products
-    if (activeCategory !== ALL_FILTER) {
-      productsForLevel2 = products.filter(p => normalizeFilter(p.param1) === normalizeFilter(activeCategory))
-    }
-    const uniqueGenders = [...new Set(productsForLevel2.map((p) => p.param2))].filter(Boolean)
+  const filterGroups = useMemo(
+    () => getFilterGroups(products, filters),
+    [products, filters]
+  )
 
-    const uniqueParam3Values = [...new Set(productsForLevel2.map((p) => p.param3))].filter(Boolean)
-
-    return {
-      categoria: uniqueCategories.map((cat) => ({ value: cat })),
-      genero: uniqueGenders.map((gen) => ({ value: gen })),
-      param3: uniqueParam3Values.map((value) => ({ value })),
-    }
-  }, [products, activeCategory])
-
-  // Manejador para el Nivel 1 (Categorías Padre)
-  const handlePrimaryFilterClick = (cat: string) => {
-    setActiveCategory(cat)
-    // Al cambiar la categoría principal, reseteamos los filtros hijos para evitar combinaciones inválidas
-    setActiveGender(ALL_FILTER)
-    setActiveParam3(ALL_FILTER)
+  const handleCategorySelect = (category: string) => {
+    applyFilters({
+      ...filters,
+      category,
+      subcategory: ALL_FILTER,
+      param3: ALL_FILTER,
+    })
   }
 
-  // Filtrado final de los productos
-  const filteredProducts = useMemo(() => {
-    const normalizedCat = normalizeFilter(activeCategory === ALL_FILTER ? "" : activeCategory)
-    const normalizedGen = normalizeFilter(activeGender === ALL_FILTER ? "" : activeGender)
-    const normalizedParam3 = normalizeFilter(activeParam3 === ALL_FILTER ? "" : activeParam3)
-
-    return products.filter((product) => {
-      const productCat = normalizeFilter(product.param1)
-      const productGen = normalizeFilter(product.param2)
-      const productParam3 = normalizeFilter(product.param3)
-
-      const matchesCategory = normalizedCat === "" || productCat === normalizedCat
-      const matchesGender = normalizedGen === "" || productGen === normalizedGen
-      const matchesParam3 = normalizedParam3 === "" || productParam3 === normalizedParam3
-
-      const matchesSoldOut =
-        activeSoldOut === ALL_FILTER ||
-        (activeSoldOut === "soldOut" && product.soldOut) ||
-        (activeSoldOut === "available" && !product.soldOut)
-
-      return matchesCategory && matchesGender && matchesParam3 && matchesSoldOut
+  const handleSubcategorySelect = (subcategory: string) => {
+    applyFilters({
+      ...filters,
+      subcategory,
+      param3: ALL_FILTER,
     })
-  }, [products, activeCategory, activeGender, activeParam3, activeSoldOut])
+  }
+
+  const filteredProducts = useMemo(
+    () => filterProducts(products, filters),
+    [products, filters]
+  )
+
+  const catalogQuery = buildCatalogQueryString(filters)
 
   return (
     <main className="min-h-screen">
@@ -135,105 +120,125 @@ export default function CatalogoPage() {
             <div className="mb-10 text-center">
               <p className="text-sm uppercase tracking-widest text-accent mb-3">{c.heroEyebrow}</p>
               <h1 className="text-3xl md:text-4xl font-light text-foreground">{c.pageTitle}</h1>
-              {(activeCategory !== ALL_FILTER || activeGender !== ALL_FILTER) && (
+              {(filters.category !== ALL_FILTER || filters.subcategory !== ALL_FILTER) && (
                 <p className="mt-3 text-sm text-muted-foreground">
-                  {activeCategory !== ALL_FILTER ? `Categoría: ${activeCategory}` : null}
-                  {activeCategory !== ALL_FILTER && activeGender !== ALL_FILTER ? " · " : null}
-                  {activeGender !== ALL_FILTER ? `Subcategoría: ${activeGender}` : null}
+                  {filters.category !== ALL_FILTER
+                    ? `${c.filters.categoryLabel}: ${filters.category}`
+                    : null}
+                  {filters.category !== ALL_FILTER && filters.subcategory !== ALL_FILTER
+                    ? " · "
+                    : null}
+                  {filters.subcategory !== ALL_FILTER
+                    ? `${c.filters.subcategoryLabel}: ${filters.subcategory}`
+                    : null}
                 </p>
               )}
             </div>
 
-            {/* SECCIÓN DE BOTONES INTEGRADA */}
             {!loading && products.length > 0 && (
-              <div className="flex flex-col gap-4 justify-center mb-12">
-                {/* Nivel 1: Categorías */}
-                <div className="flex flex-wrap justify-center gap-2">
-                  {[ALL_FILTER, ...filterGroups.categoria.map((option) => option.value)].map((cat) => (
-                    <Button
-                      key={cat}
-                      type="button"
-                      size="sm"
-                      variant={activeCategory === cat ? "default" : "outline"}
-                      onClick={() => handlePrimaryFilterClick(cat)}
-                      className={
-                        activeCategory === cat ? "bg-primary text-primary-foreground" : ""
-                      }
-                    >
-                      {cat}
-                    </Button>
-                  ))}
+              <>
+                <div className="mb-6 sm:hidden">
+                  <MobileCatalogFilters
+                    products={products}
+                    appliedFilters={filters}
+                    onApply={applyFilters}
+                  />
                 </div>
 
-                {/* Nivel 2: Subcategorías (Solo se muestra si hay subcategorías disponibles) */}
-                {filterGroups.genero.length > 0 && (
-                  <>
-                    <div className="hidden sm:block h-px w-24 mx-auto bg-border" />
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {[ALL_FILTER, ...filterGroups.genero.map((option) => option.value)].map((gen) => (
-                        <Button
-                          key={gen}
-                          type="button"
-                          size="sm"
-                          variant={activeGender === gen ? "default" : "outline"}
-                          onClick={() => setActiveGender(gen)}
-                          className={
-                            activeGender === gen ? "bg-primary text-primary-foreground" : ""
-                          }
-                        >
-                          {gen}
-                        </Button>
-                      ))}
-                    </div>
-                  </>
-                )}
+                <div className="hidden sm:flex flex-col gap-4 justify-center mb-12">
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {[ALL_FILTER, ...filterGroups.categoria].map((cat) => (
+                      <Button
+                        key={cat}
+                        type="button"
+                        size="sm"
+                        variant={filters.category === cat ? "default" : "outline"}
+                        onClick={() => handleCategorySelect(cat)}
+                        className={
+                          filters.category === cat ? "bg-primary text-primary-foreground" : ""
+                        }
+                      >
+                        {cat === ALL_FILTER ? c.allFilterLabel : cat}
+                      </Button>
+                    ))}
+                  </div>
 
-                {/* Nivel 3: Filtro adicional */}
-                {filterGroups.param3.length > 0 && (
-                  <>
-                    <div className="hidden sm:block h-px w-24 mx-auto bg-border" />
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {[ALL_FILTER, ...filterGroups.param3.map((option) => option.value)].map((value) => (
-                        <Button
-                          key={value}
-                          type="button"
-                          size="sm"
-                          variant={activeParam3 === value ? "default" : "outline"}
-                          onClick={() => setActiveParam3(value)}
-                          className={
-                            activeParam3 === value ? "bg-primary text-primary-foreground" : ""
-                          }
-                        >
-                          {value}
-                        </Button>
-                      ))}
-                    </div>
-                  </>
-                )}
+                  {filterGroups.genero.length > 0 && (
+                    <>
+                      <div className="h-px w-24 mx-auto bg-border" />
+                      <div className="flex flex-wrap justify-center gap-2">
+                        {[ALL_FILTER, ...filterGroups.genero].map((gen) => (
+                          <Button
+                            key={gen}
+                            type="button"
+                            size="sm"
+                            variant={filters.subcategory === gen ? "default" : "outline"}
+                            onClick={() => handleSubcategorySelect(gen)}
+                            className={
+                              filters.subcategory === gen
+                                ? "bg-primary text-primary-foreground"
+                                : ""
+                            }
+                          >
+                            {gen === ALL_FILTER ? c.allFilterLabel : gen}
+                          </Button>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                {/* Filtro de estado agotado */}
-                <div className="hidden sm:block h-px w-24 mx-auto bg-border" />
-                <div className="flex flex-wrap justify-center gap-2">
-                  {[
-                    { label: ALL_FILTER, value: ALL_FILTER },
-                    { label: "Disponible", value: "available" },
-                    { label: c.producto.soldOutLabel, value: "soldOut" },
-                  ].map((option) => (
-                    <Button
-                      key={option.value}
-                      type="button"
-                      size="sm"
-                      variant={activeSoldOut === option.value ? "default" : "outline"}
-                      onClick={() => setActiveSoldOut(option.value)}
-                      className={
-                        activeSoldOut === option.value ? "bg-primary text-primary-foreground" : ""
-                      }
-                    >
-                      {option.label}
-                    </Button>
-                  ))}
+                  {filterGroups.param3.length > 0 && (
+                    <>
+                      <div className="h-px w-24 mx-auto bg-border" />
+                      <div className="flex flex-wrap justify-center gap-2">
+                        {[ALL_FILTER, ...filterGroups.param3].map((value) => (
+                          <Button
+                            key={value}
+                            type="button"
+                            size="sm"
+                            variant={filters.param3 === value ? "default" : "outline"}
+                            onClick={() => applyFilters({ ...filters, param3: value })}
+                            className={
+                              filters.param3 === value ? "bg-primary text-primary-foreground" : ""
+                            }
+                          >
+                            {value === ALL_FILTER ? c.allFilterLabel : value}
+                          </Button>
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  <div className="h-px w-24 mx-auto bg-border" />
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {[
+                      { label: c.allFilterLabel, value: ALL_FILTER },
+                      { label: c.filters.availableLabel, value: "available" },
+                      { label: c.producto.soldOutLabel, value: "soldOut" },
+                    ].map((option) => (
+                      <Button
+                        key={option.value}
+                        type="button"
+                        size="sm"
+                        variant={filters.soldOut === option.value ? "default" : "outline"}
+                        onClick={() =>
+                          applyFilters({
+                            ...filters,
+                            soldOut: option.value as CatalogFilters["soldOut"],
+                          })
+                        }
+                        className={
+                          filters.soldOut === option.value
+                            ? "bg-primary text-primary-foreground"
+                            : ""
+                        }
+                      >
+                        {option.label}
+                      </Button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </>
             )}
 
             {loading ? (
@@ -242,8 +247,19 @@ export default function CatalogoPage() {
               <div className="max-w-xl mx-auto text-center">
                 <p className="text-muted-foreground mb-6">{c.emptyMessage}</p>
                 <div className="flex gap-4 justify-center">
-                  <Button type="button" variant="outline" onClick={() => handlePrimaryFilterClick(ALL_FILTER)}>
-                    Limpiar filtros
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() =>
+                      applyFilters({
+                        category: ALL_FILTER,
+                        subcategory: ALL_FILTER,
+                        param3: ALL_FILTER,
+                        soldOut: ALL_FILTER,
+                      })
+                    }
+                  >
+                    {c.filters.clearLabel}
                   </Button>
                   <Button asChild variant="default">
                     <Link href="/">{c.backToHome}</Link>
@@ -265,6 +281,7 @@ export default function CatalogoPage() {
                         imagen={product.image}
                         precio={`$${product.price.toFixed(2)}`}
                         soldOut={product.soldOut}
+                        catalogQuery={catalogQuery}
                       />
                     </article>
                   )

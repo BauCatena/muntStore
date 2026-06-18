@@ -40,9 +40,11 @@ export type CardProps = {
   precio?: string
   /** Producto agotado, muestra estado en lugar de botones de consulta. */
   soldOut?: boolean
+  /** Query string del catálogo para preservar filtros al volver del detalle. */
+  catalogQuery?: string
 }
 
-export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut }: CardProps) {
+export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut, catalogQuery }: CardProps) {
   const [justAdded, setJustAdded] = useState(false)
   const onAddToCart = (p: Product) => {
     addToCart(p.id, 1)
@@ -50,9 +52,13 @@ export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut }: 
     window.setTimeout(() => setJustAdded(false), 2000)
   }
   if (imagen) {
+    const detailHref = catalogQuery
+      ? `/catalogo/${id}?${catalogQuery}`
+      : `/catalogo/${id}`
+
     return (
       <div className="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
-        <Link href={`/catalogo/${id}`} className="block">
+        <Link href={detailHref} className="block">
           <div className="relative aspect-[4/5] w-full bg-muted">
             <Image
               src={imagen}

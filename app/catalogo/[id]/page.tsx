@@ -1,14 +1,15 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
-import { useParams } from "next/navigation"
+import { useParams, useSearchParams } from "next/navigation"
 import { ArrowLeft, Instagram, Phone, ShoppingBag } from "lucide-react"
 
 import { ProductGallery } from "@/components/ProductGallery"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/Header"
 import { config } from "@/data/config"
+import { buildCatalogHref, parseFiltersFromSearchParams } from "@/lib/catalog-filters"
 import { loadProductsFromConfig } from "@/lib/load-products"
 import { getProductGallery } from "@/lib/product-helpers"
 import { buildConsultMessage } from "@/lib/build-consult-message"
@@ -20,12 +21,18 @@ const { catalogo: c } = config
 
 export default function ProductoDetallePage() {
   const params = useParams()
+  const searchParams = useSearchParams()
   const rawId = params?.id
   const idStr = Array.isArray(rawId) ? rawId[0] : rawId
   const id = idStr ? Number.parseInt(idStr, 10) : NaN
 
   const [product, setProduct] = useState<Product | null | undefined>(undefined)
   const [justAdded, setJustAdded] = useState(false)
+
+  const catalogHref = useMemo(
+    () => buildCatalogHref(parseFiltersFromSearchParams(searchParams)),
+    [searchParams]
+  )
 
   useEffect(() => {
     let cancel = false
@@ -92,7 +99,7 @@ export default function ProductoDetallePage() {
                 {c.producto.notFoundTitle}
               </h1>
               <Button asChild variant="outline">
-                <Link href="/catalogo">{c.producto.notFoundCta}</Link>
+                <Link href={catalogHref}>{c.producto.notFoundCta}</Link>
               </Button>
             </div>
           </section>
@@ -113,7 +120,7 @@ export default function ProductoDetallePage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <Link
-                href="/catalogo"
+                href={catalogHref}
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
               >
                 <ArrowLeft className="w-4 h-4" />

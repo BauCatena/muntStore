@@ -185,6 +185,16 @@ export type SiteConfig = {
     }
     /** Número WhatsApp en formato E.164 sin +: ej. 54911xxxxxxxx */
     whatsappPhoneE164: string
+    filters: {
+      buttonLabel: string
+      applyLabel: string
+      clearLabel: string
+      categoryLabel: string
+      subcategoryLabel: string
+      param3Label: string
+      availabilityLabel: string
+      availableLabel: string
+    }
     producto: {
       backToCatalog: string
       detalleEyebrow: string
@@ -195,6 +205,7 @@ export type SiteConfig = {
       addToCart: string
       addedFeedback: string
       consultWhatsApp: string
+      soldOutLabel: string
     }
   }
   carrito: {
@@ -228,7 +239,7 @@ export const config: SiteConfig = {
     },
     colors: {
       light: {
-        background: "oklch(0.98 0.002 90)",
+        background: " oklch(0.9493 0.0197 77.03) ",
         foreground: "oklch(0.18 0.01 60)",
         card: "oklch(1 0 0)",
         cardForeground: "oklch(0.18 0.01 60)",
@@ -236,17 +247,17 @@ export const config: SiteConfig = {
         popoverForeground: "oklch(0.18 0.01 60)",
         primary: "oklch(0.25 0.01 60)",
         primaryForeground: "oklch(0.98 0.002 90)",
-        secondary: "oklch(0.96 0.03 10)",
+        secondary: "oklch(0.9581 0.0173 113.61)",
         secondaryForeground: "oklch(0.25 0.01 60)",
         muted: "oklch(0.94 0.005 80)",
         mutedForeground: "oklch(0.50 0.01 60)",
-        accent: "oklch(0.68 0.12 10)",
+        accent: "oklch(0.714 0.0839 77.03)",
         accentForeground: "oklch(0.98 0.002 90)",
         destructive: "oklch(0.577 0.245 27.325)",
         destructiveForeground: "oklch(0.577 0.245 27.325)",
         border: "oklch(0.90 0.005 80)",
         input: "oklch(0.90 0.005 80)",
-        ring: "oklch(0.68 0.12 10)",
+        ring: "oklch(0.714 0.0839 77.03)",
         chart1: "oklch(0.646 0.222 41.116)",
         chart2: "oklch(0.6 0.118 184.704)",
         chart3: "oklch(0.398 0.07 227.392)",
@@ -300,7 +311,7 @@ export const config: SiteConfig = {
   },
   header: {
     logo: {
-      src: "/logo1.svg",
+      src: "/assets/logo1.svg",
       alt: "Münt Store",
       widthDesktop: 500,
       heightDesktop: 186,
@@ -451,6 +462,16 @@ export const config: SiteConfig = {
       },
     },
     whatsappPhoneE164: "5492634783984",
+    filters: {
+      buttonLabel: "Filtros",
+      applyLabel: "Aplicar",
+      clearLabel: "Limpiar",
+      categoryLabel: "Categoría",
+      subcategoryLabel: "Subcategoría",
+      param3Label: "Color",
+      availabilityLabel: "Disponibilidad",
+      availableLabel: "Disponible",
+    },
     producto: {
       backToCatalog: "Volver al catálogo",
       detalleEyebrow: "Hechos con dedicación",
