@@ -42,9 +42,11 @@ export type CardProps = {
   soldOut?: boolean
   /** Query string del catálogo para preservar filtros al volver del detalle. */
   catalogQuery?: string
+  /** Categoría del producto (param1) para mensajes de consulta. */
+  param1?: string
 }
 
-export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut, catalogQuery }: CardProps) {
+export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut, catalogQuery, param1 }: CardProps) {
   const [justAdded, setJustAdded] = useState(false)
   const onAddToCart = (p: Product) => {
     addToCart(p.id, 1)
@@ -100,6 +102,7 @@ export function Card({id, titulo, descripcion, icon, imagen, precio, soldOut, ca
                     onConsultWhatsApp({
                       id,
                       name: titulo,
+                      param1,
                       description: descripcion,
                     } as Product)
                   }

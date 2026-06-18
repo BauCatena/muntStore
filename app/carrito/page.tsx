@@ -11,19 +11,18 @@ import { loadProductsFromConfig } from "@/lib/load-products"
 import {
   CART_STORAGE_EVENT,
   CART_STORAGE_KEY,
+  buildCartWhatsappMessage,
   getCartLines,
   removeFromCart,
-  buildCartWhatsappMessage,
+  resolveCartRows,
+  type CartRow,
 } from "@/lib/cart-storage"
 import { buildWhatsAppUrl } from "@/lib/contact-urls"
-import type { Product } from "@/types/product"
 
 const { carrito, catalogo, header, meta: siteMeta } = config
 
 export default function CarritoPage() {
-  const [rows, setRows] = useState<
-    { product: Product; quantity: number; lineTotal: number }[]
-  >([])
+  const [rows, setRows] = useState<CartRow[]>([])
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
 
@@ -35,22 +34,17 @@ export default function CarritoPage() {
       setLoading(false)
       return
     }
+
+    setLoading(true)
     ;(async () => {
       try {
         const all = await loadProductsFromConfig()
-        const byId = new Map(all.map((p) => [p.id, p]))
-        const next: { product: Product; quantity: number; lineTotal: number }[] =
-          []
-        let sum = 0
-        for (const line of lines) {
-          const p = byId.get(line.productId)
-          if (!p) continue
-          const lineTotal = p.price * line.quantity
-          sum += lineTotal
-          next.push({ product: p, quantity: line.quantity, lineTotal })
-        }
+        const { rows: next, total: sum } = resolveCartRows(all)
         setRows(next)
         setTotal(sum)
+      } catch {
+        setRows([])
+        setTotal(0)
       } finally {
         setLoading(false)
       }

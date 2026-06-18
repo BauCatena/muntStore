@@ -282,6 +282,7 @@ export default function CatalogoPage() {
                         precio={`$${product.price.toFixed(2)}`}
                         soldOut={product.soldOut}
                         catalogQuery={catalogQuery}
+                        param1={product.param1}
                       />
                     </article>
                   )

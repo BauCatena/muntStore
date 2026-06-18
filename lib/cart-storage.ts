@@ -1,4 +1,7 @@
 import type { Product } from "@/types/product"
+import type { CartRow } from "@/lib/build-cart-message"
+
+export { buildCartWhatsappMessage, type CartRow } from "@/lib/build-cart-message"
 
 export const CART_STORAGE_KEY = "optik-cart-v1"
 export const CART_STORAGE_EVENT = "optik-cart-updated"
@@ -82,6 +85,23 @@ export function removeFromCart(productId: number) {
   saveLines(getCartLines().filter((l) => l.productId !== productId))
 }
 
+export function resolveCartRows(products: Product[]): { rows: CartRow[]; total: number } {
+  const lines = getCartLines()
+  const byId = new Map(products.map((p) => [p.id, p]))
+  const rows: CartRow[] = []
+  let total = 0
+
+  for (const line of lines) {
+    const product = byId.get(line.productId)
+    if (!product) continue
+    const lineTotal = product.price * line.quantity
+    total += lineTotal
+    rows.push({ product, quantity: line.quantity, lineTotal })
+  }
+
+  return { rows, total }
+}
+
 export function updateLineQuantity(productId: number, quantity: number) {
   if (quantity <= 0) {
     removeFromCart(productId)
@@ -91,20 +111,4 @@ export function updateLineQuantity(productId: number, quantity: number) {
     l.productId === productId ? { ...l, quantity } : l
   )
   setCartLines(lines)
-}
-
-export function buildCartWhatsappMessage(
-  lines: { product: Product; quantity: number; lineTotal: number }[],
-  total: number,
-  template: string
-): string {
-  const itemLines = lines
-    .map(
-      (row) =>
-        `• ${row.product.name} x${row.quantity} — $${row.lineTotal.toFixed(2)}`
-    )
-    .join("\n")
-  return template
-    .replace("{items}", itemLines)
-    .replace("{total}", total.toFixed(2))
 }

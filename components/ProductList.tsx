@@ -63,24 +63,23 @@ function FlipCard({
 
   return (
     <div
-      className="w-full h-[34rem] md:h-[37rem] cursor-pointer p-4 md:p-5 box-border"
+      className="w-full h-[34rem] md:h-[37rem] cursor-pointer p-4 md:p-5 box-border overflow-hidden"
       style={{ perspective: "1000px" }}
       onClick={() => onToggle(id)}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500"
+        className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d]"
         style={{
-          transformStyle: "preserve-3d",
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
         <div
-          className={`absolute inset-0 rounded-lg overflow-hidden bg-cover bg-center ${
-            isFlipped ? "pointer-events-none" : "pointer-events-auto"
+          className={`absolute inset-0 rounded-lg overflow-hidden bg-cover bg-center backface-hidden ${
+            isFlipped ? "pointer-events-none z-0" : "pointer-events-auto z-10"
           }`}
           style={{
             backgroundImage: `url('${bgImage}')`,
-            backfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(1px)",
           }}
         >
           <div className="absolute inset-0 bg-foreground/40" />
@@ -99,12 +98,11 @@ function FlipCard({
         </div>
 
         <div
-          className={`absolute inset-0 rounded-lg bg-card border border-border overflow-hidden ${
-            isFlipped ? "pointer-events-auto" : "pointer-events-none"
+          className={`absolute inset-0 rounded-lg bg-card border border-border overflow-hidden backface-hidden ${
+            isFlipped ? "pointer-events-auto z-10" : "pointer-events-none z-0"
           }`}
           style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
+            transform: "rotateY(180deg) translateZ(1px)",
           }}
         >
           <div className="h-full flex flex-col items-center justify-center p-6 md:p-8">

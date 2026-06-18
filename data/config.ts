@@ -449,16 +449,11 @@ export const config: SiteConfig = {
     consultButtonLabel: "Consultar por Instagram",
     instagramUser: "",
     consult: {
-      default: "Hola como estás? Te escribo por",
+      default: "Hola, ¿cómo estás? Te escribo por {name}",
       byCategory: {
-        "Tipo de producto 1":
-          "Hola como estas? te consulto por",
-        "Tipo de producto 2":
-          "Texto de la consulta por categoria 2",
-        "Tipo de producto 3": "Texto de la consulta por categoria 3",
-        "Tipo de producto 4": "Texto de la consulta por categoria 4",
-        "Tipo de producto 5":
-          "Texto de la consulta por categoria 5",
+        Medias: "Hola, ¿cómo estás? Te consulto por {name}",
+        Manguitas: "Hola, ¿cómo estás? Te consulto por {name}",
+        Seamless: "Hola, ¿cómo estás? Te consulto por {name}",
       },
     },
     whatsappPhoneE164: "5492634783984",
@@ -494,7 +489,7 @@ export const config: SiteConfig = {
     sendWhatsAppLabel: "Enviar pedido por WhatsApp",
     removeLineAria: "Quitar del carrito",
     whatsappMessageTemplate:
-      "Texto de la sección de carrito",
+      "Hola! Quiero consultar por el siguiente pedido:\n\n{items}\n\nTotal estimado: ${total}\n\nGracias!",
     tableProduct: "Producto",
     tableQty: "Cant.",
     tableUnit: "P. unit.",
