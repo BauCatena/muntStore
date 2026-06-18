@@ -311,7 +311,7 @@ export const config: SiteConfig = {
   },
   header: {
     logo: {
-      src: "/assets/logo1.svg",
+      src: "/assets/logo2.svg",
       alt: "Münt Store",
       widthDesktop: 500,
       heightDesktop: 186,

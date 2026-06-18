@@ -65,7 +65,7 @@ export function Header({
                 width={logo.widthDesktop}
                 height={logo.heightDesktop}
                 priority
-                className="hidden md:block h-[7rem] w-[7rem] rounded-full border "
+                className="hidden md:block h-[4.5rem] w-[15rem]"
               />
               <Image
                 src={logo.src}
@@ -74,7 +74,7 @@ export function Header({
                 height={logo.heightMobile}
                 priority
                 // Ajusté un poco el margen superior (mt) para que quede mejor centrado con el h-24
-                className="md:hidden h-[5rem] w-[5rem] rounded-full mt-2"
+                className="md:hidden h-[4.2rem] w-[13rem] mt-2"
               />
             </div>
             <span className="text-xs text-muted-foreground tracking-wide md:hidden mt-1">

@@ -18,7 +18,7 @@
   },
   {
     "id": 2,
-    "name": "Compresión deportiva (M)",
+    "name": "Compresión deportiva Negra (M)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3":"Negro",
@@ -30,7 +30,7 @@
   },
   {
     "id": 3,
-    "name": "Compresión deportiva (L)",
+    "name": "Compresión deportiva Negra (L)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3": "Negro",
@@ -42,7 +42,7 @@
   },
   {
     "id": 4,
-    "name": "RomBrock (Talle)",
+    "name": "RombRock Negras (L)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Negro",
@@ -54,7 +54,7 @@
   },
   {
     "id": 5,
-    "name": "RomBrock (Talle)",
+    "name": "RombRock Blancas (S)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Blanco",
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "name": "Compresión MedFyl (Talle)",
+    "name": "Compresión MedFyl Negra (M)",
     "param1": "Medias",
     "param2": "Compresión MedFyl",
     "param3": "Negro",
@@ -78,7 +78,7 @@
   },
   {
     "id": 7,
-    "name": "Compresión Mundial (Talle)",
+    "name": "Compresión Mundial (M)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3": "Azul",
@@ -90,7 +90,7 @@
   },
   {
     "id": 8,
-    "name": "Compresión Graduada (Talle)",
+    "name": "Compresión Graduada Negra (M)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3": "Negro",
@@ -102,7 +102,7 @@
   },
   {
     "id": 9,
-    "name": "Estabilizadora de tobillo (Talle)",
+    "name": "Estabilizadora de tobillo Negra (M)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Negro",
@@ -114,7 +114,7 @@
   },
   {
     "id": 10,
-    "name": "Compresión deportiva (Talle)",
+    "name": "Compresión deportiva Coral (S)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3": "Coral",
@@ -126,7 +126,7 @@
   },
   {
     "id": 11,
-    "name": "MedFyl Invierno",
+    "name": "MedFyl Invierno Blanco (L)",
     "param1": "Medias",
     "param2": "Compresión MedFyl",
     "param3": "Blanco",
@@ -138,7 +138,7 @@
   },
   {
     "id": 12,
-    "name": "Sox x Cove",
+    "name": "Sox x Cove Verde Manzana (L)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Verde Manzana",
@@ -150,7 +150,7 @@
   },
   {
     "id": 13,
-    "name": "Básica deportiva (Talle)",
+    "name": "Básica deportiva Gris(S)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Gris",
@@ -162,7 +162,7 @@
   },
   {
     "id": 14,
-    "name": "Compresión deportiva (Talle)",
+    "name": "Compresión deportiva Celeste (S)",
     "param1": "Medias",
     "param2": "Compresión",
     "param3": "Celeste",
@@ -174,7 +174,7 @@
   },
   {
     "id": 15,
-    "name": "Sox x Cove",
+    "name": "Sox x Cove Marrón (L)",
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Marrón",
@@ -186,7 +186,7 @@
   },
   {
     "id": 16,
-    "name": "Manguitas de compresión (M1)",
+    "name": "Manguitas de compresión Naranja (M1)",
     "param1": "Manguitas",
     "param2": "Compresión",
     "param3": "Naranja",
@@ -198,7 +198,7 @@
   },
   {
     "id": 17,
-    "name": "Manguitas de compresión (M1)",
+    "name": "Manguitas de compresión Blancas (M1)",
     "param1": "Manguitas",
     "param2": "Compresión",
     "param3": "Blanco",
@@ -210,7 +210,7 @@
   },
   {
     "id": 18,
-    "name": "Manguitas de compresión (M1)",
+    "name": "Manguitas de compresión Azul (M1)",
     "param1": "Manguitas",
     "param2": "Compresión",
     "param3": "Azul",
@@ -222,7 +222,7 @@
   },
   {
     "id": 19,
-    "name": "Manguitas (M1)",
+    "name": "Manguitas Blancas (M1)",
     "param1": "Manguitas",
     "param2": "Básicas",
     "param3": "Blancas",
@@ -234,7 +234,7 @@
   },
   {
     "id": 20,
-    "name": "Manguitas (M1)",
+    "name": "Manguitas Blancas (M1)",
     "param1": "Manguitas",
     "param2": "Básicas",
     "param3": "Negras",
@@ -246,7 +246,7 @@
   },
   {
     "id": 21,
-    "name": "Manguitas (M2)",
+    "name": "Manguitas Negra (M2)",
     "param1": "Manguitas",
     "param2": "Básicas",
     "param3": "Negras",
@@ -258,7 +258,7 @@
   },
   {
     "id": 22,
-    "name": "Remera Térmica (S)",
+    "name": "Remera Térmica Morada de Mujer (S)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Morado",
@@ -285,7 +285,7 @@
   },
   {
     "id": 23,
-    "name": "Remera Térmica (S)",
+    "name": "Remera Térmica Negra de Mujer (S)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Negro",
@@ -304,7 +304,7 @@
   },
   {
     "id": 24,
-    "name": "Remera Térmica (S)",
+    "name": "Remera Térmica Moliné de Mujer (S)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Moline",
@@ -323,7 +323,7 @@
   },
   {
     "id": 25,
-    "name": "Remera Térmica (M)",
+    "name": "Remera Térmica Morada de Mujer (M)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Morado",
@@ -349,7 +349,7 @@
   },
   {
     "id": 26,
-    "name": "Remera Térmica (M)",
+    "name": "Remera Térmica Moliné de Mujer (M)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Moline",
@@ -368,7 +368,7 @@
   },
   {
     "id": 27,
-    "name": "Remera Térmica (L)",
+    "name": "Remera Térmica Negra de Mujer (L)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Negro",
@@ -390,7 +390,7 @@
   },
   {
     "id": 28,
-    "name": "Remera Térmica (M)",
+    "name": "Remera Térmica Negra de Mujer (M)",
     "param1": "Seamless",
     "param2": "Térmicas de mujer",
     "param3": "Negro",
@@ -412,7 +412,7 @@
   },
   {
     "id": 29,
-    "name": "Calza Larga (M)",
+    "name": "Calza Larga Negra de Mujer (M)",
     "param1": "Seamless",
     "param2": "Calza de mujer",
     "param3": "Negro",
@@ -432,7 +432,7 @@
   },
   {
     "id": 30,
-    "name": "Calza Ciclista (M)",
+    "name": "Calza Ciclista Negra de Mujer (M)",
     "param1": "Seamless",
     "param2": "Calza de mujer",
     "param3": "Negro",
@@ -452,7 +452,7 @@
   },
   {
     "id": 31,
-    "name": "Buzo (S)",
+    "name": "Buzo Negro de Hombre (S)",
     "param1": "Seamless",
     "param2": "Buzo de hombre",
     "param3": "Negro",
@@ -473,7 +473,7 @@
   },
   {
     "id": 32,
-    "name": "Buzo (M)",
+    "name": "Buzo Negro de Hombre (M)",
     "param1": "Seamless",
     "param2": "Buzo de hombre",
     "param3": "Negro",
@@ -494,7 +494,7 @@
   },
   {
     "id": 33,
-    "name": "Buzo (XL)",
+    "name": "Buzo Azul de Hombre (XL)",
     "param1": "Seamless",
     "param2": "Buzo de hombre",
     "param3": "Azul",
@@ -514,7 +514,7 @@
   },
   {
     "id": 34,
-    "name": "Remera Térmica (S)",
+    "name": "Remera Térmica Azul Marino de hombre (S)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Azul",
@@ -535,7 +535,7 @@
   },
   {
     "id": 35,
-    "name": "Remera Térmica (S)",
+    "name": "Remera Térmica Marrón de Hombre (S)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Marrón",
@@ -556,7 +556,7 @@
   },
   {
     "id": 36,
-    "name": "Remera Térmica (XL)",
+    "name": "Remera Térmica Azul Marino de Hombre (XL)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Azul",
@@ -577,7 +577,7 @@
   },
   {
     "id": 37,
-    "name": "Calza Larga (S)",
+    "name": "Calza Larga Azul de mujer (S)",
     "param1": "Seamless",
     "param2": "Calza de mujer",
     "param3": "Azul",
@@ -597,7 +597,7 @@
   },
   {
     "id": 38,
-    "name": "Remera Térmica (XL)",
+    "name": "Remera Térmica Negra de Hombre (XL)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Negro",
@@ -618,7 +618,7 @@
   },
   {
     "id": 39,
-    "name": "Remera Térmica (L)",
+    "name": "Remera Térmica Negra de Hombre (L)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Negro",
@@ -639,7 +639,7 @@
   },
   {
     "id": 40,
-    "name": "Remera Térmica (M)",
+    "name": "Remera Térmica Negra de Hombre (M)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Negro",
@@ -660,7 +660,7 @@
   },
   {
     "id": 41,
-    "name": "Remera Térmica (XL)",
+    "name": "Remera Térmica Azul de Hombre (XL)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Azul",
@@ -680,7 +680,7 @@
   },
   {
     "id": 42,
-    "name": "Remera Térmica (L)",
+    "name": "Remera Térmica Azul de Hombre (L)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Azul",
@@ -701,7 +701,7 @@
   },
   {
     "id": 43,
-    "name": "Remera Térmica (L)",
+    "name": "Remera Térmica Gris de Hombre (L)",
     "param1": "Seamless",
     "param2": "Térmicas de hombre",
     "param3": "Gris",
@@ -722,7 +722,7 @@
   },
   {
     "id": 44,
-    "name": "Calza Larga (L)",
+    "name": "Calza Larga Negra (L)",
     "param1": "Seamless",
     "param2": "Calza de mujer",
     "param3": "Negro",
@@ -741,7 +741,7 @@
   },
   {
     "id": 45,
-    "name": "Calza Larga (L)",
+    "name": "Calza Larga Azul (L)",
     "param1": "Seamless",
     "param2": "Calza de mujer",
     "param3": "Azul",
@@ -761,7 +761,7 @@
   },
   {
     "id": 46,
-    "name": "Top Deportivo (M)",
+    "name": "Top Deportivo Negro (M)",
     "param1": "Seamless",
     "param2": "Top Deportivo",
     "param3": "Negro",
@@ -782,7 +782,7 @@
   },
   {
     "id": 47,
-    "name": "Top Deportivo (L)",
+    "name": "Top Deportivo Negro (L)",
     "param1": "Seamless",
     "param2": "Top Deportivo",
     "param3": "Negro",
@@ -803,7 +803,7 @@
   },
   {
     "id": 48,
-    "name": "Top Deportivo (M)",
+    "name": "Top Deportivo Azul (M)",
     "param1": "Seamless",
     "param2": "Top Deportivo",
     "param3": "Azul",
