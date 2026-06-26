@@ -106,7 +106,7 @@
     "param1": "Medias",
     "param2": "Básicas",
     "param3": "Negro",
-    "price": 20000,
+    "price": 28000,
     "image": "/assets/medias/básicas/fu37b/1n.webp",
     "images": ["/assets/medias/básicas/fu37b/1n.webp", "/assets/medias/básicas/fu37b/2n.webp", "/assets/medias/básicas/fu37b/3n.webp", "/assets/medias/básicas/fu37b/4n.webp", "/assets/medias/básicas/fu37b/info.jpeg", "/assets/medias/básicas/fu37b/warning.webp"],
     "soldOut": false,
